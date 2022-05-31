@@ -1,5 +1,7 @@
 /*-------------HEADER-------------*/
 header {
+  padding-top: 24px;
+  padding-bottom: 25px;
   border-bottom: 1px solid var(--header-border-color);
 }
 header .container {
@@ -7,15 +9,13 @@ header .container {
   align-items: center;
 }
 .logo {
-  display: flex;
+  display: block;
   font-family: "Raleway", "Open Sans", sans-serif;
   font-weight: 700;
   color: var(--accent);
   font-size: 26px;
   line-height: 1.19;
-  margin-top: 24px;
   margin-right: 93px;
-  margin-bottom: 25px;
 }
 .logo-accent {
   color: var(--secondary-text);
@@ -29,13 +29,6 @@ header .container {
   letter-spacing: 0.02em;
   margin-right: 50px;
 }
-.header-nav:hover,
-.header-nav:focus {
-  color: var(--accent);
-}
-.current {
-  color: var(--accent);
-}
 .contact-list {
   display: flex;
   margin-left: auto;
@@ -45,6 +38,13 @@ header .container {
   letter-spacing: 0.02em;
   margin-right: 50px;
 }
+.header-nav:last-child,
+.header-contact:last-child {
+  margin-right: 0;
+}
+.current,
+.header-nav:hover,
+.header-nav:focus,
 .header-contact:hover,
 .header-contact:focus {
   color: var(--accent);
@@ -56,6 +56,7 @@ header .container {
   background-color: var(--dark-background);
   padding: 200px 0;
   text-align: center;
+  margin: 0 auto;
 }
 .hero-title {
   font-weight: 900;
@@ -77,15 +78,19 @@ header .container {
   border-radius: 4px;
   color: var(--main-white);
   background-color: var(--accent);
+  cursor: pointer;
+}
+.hero-btn:hover,
+.hero-btn:focus {
+  background-color: var(--secondary-accent);
 }
 
 /*-------------ADVANTAGES-------------*/
-.advantage {
-  margin-bottom: 94px;
-}
 .advantage-list {
   display: flex;
-  justify-content: space-between;
+}
+.advantage-list li:not(:last-child) {
+  margin-right: 30px;
 }
 .advantage-item {
   width: 270px;
@@ -102,6 +107,9 @@ header .container {
 }
 
 /*-------------WHAT WE DO-------------*/
+.spec-section {
+  padding-bottom: 94px;
+}
 .section-title {
   font-weight: 700;
   font-size: 36px;
@@ -112,7 +120,9 @@ header .container {
 }
 .about-list {
   display: flex;
-  justify-content: space-between;
+}
+.about-list li:not(:last-child) {
+  margin-right: 30px;
 }
 
 /*-------------TEAM-------------*/
@@ -121,7 +131,9 @@ header .container {
 }
 .team-list {
   display: flex;
-  justify-content: space-between;
+}
+.team-list li:not(:last-child) {
+  margin-right: 30px;
 }
 .caption {
   background-color: var(--main-white);
@@ -147,7 +159,6 @@ header .container {
 footer .container {
   padding-top: 60px;
   padding-bottom: 60px;
-  text-align: left;
 }
 .footer {
   background-color: var(--dark-background);
@@ -190,7 +201,7 @@ footer .container {
   line-height: 1.39;
   text-align: center;
   letter-spacing: 0.03em;
-  padding: 8px 22px;
+  padding: 6px 22px;
   border: 0;
   border-radius: 4px;
   color: var(--secondary-text);
@@ -208,25 +219,26 @@ footer .container {
 .projects-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  margin-right: -30px;
   margin-bottom: -30px;
 }
 .project-item {
+  margin-right: 30px;
   margin-bottom: 30px;
-  background: var(--main-white);
-  border: 1px solid var(--border-color);
 }
 .project-caption {
-  text-align: left;
   padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 24px;
+  border: 1px solid var(--border-color);
+  border-top: none;
 }
 .project-name {
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  margin-bottom: 4px;
   color: var(--secondary-text);
 }
 .project-type {
